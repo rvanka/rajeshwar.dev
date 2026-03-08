@@ -1,14 +1,14 @@
 import Link from "next/link";
 
 const systems = [
-  "Cloud Spanner",
-  "Cassandra API",
+  "Cloud Databases",
+  "Cassandra",
   "Distributed Systems",
-  "AI / Data Infrastructure",
+  "AI / Data Infra",
   "AutoFDO",
   "MATLAB JIT",
   "Home Assistant",
-  "News Platform",
+//  "News Platform",
   "Self-Hosted Infra",
 ];
 
