@@ -1,37 +1,36 @@
 import Link from "next/link";
 
+const links = [
+  { href: "/about", label: "About" },
+  { href: "/projects", label: "Projects" },
+  { href: "/publications", label: "Publications" },
+  { href: "/blog", label: "Writing" },
+  { href: "/resume", label: "Resume" },
+];
+
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center py-6 border-b border-zinc-800 mb-16">
-
-      <Link href="/" className="text-lg font-semibold">
-        Rajeshwar
-      </Link>
-
-      <div className="flex gap-8 text-gray-400 text-sm">
-
-        <Link href="/about" className="hover:text-white transition">
-          About
+    <header className="border-b border-zinc-900">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between py-6">
+        <Link
+          href="/"
+          className="text-lg font-semibold tracking-tight text-white"
+        >
+          Rajeshwar
         </Link>
 
-        <Link href="/projects" className="hover:text-white transition">
-          Projects
-        </Link>
-
-        <Link href="/publications" className="hover:text-white transition">
-          Publications
-        </Link>
-
-        <Link href="/blog" className="hover:text-white transition">
-          Writing
-        </Link>
-
-        <Link href="/resume" className="hover:text-white transition">
-          Resume
-        </Link>
-
-      </div>
-
-    </nav>
+        <div className="flex items-center gap-6 text-sm text-zinc-400">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="transition hover:text-white"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      </nav>
+    </header>
   );
 }

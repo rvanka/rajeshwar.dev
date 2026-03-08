@@ -16,21 +16,25 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Rajeshwar Vanka",
   description:
-    "Technical lead working on distributed systems, AI infrastructure, and self-hosted platforms.",
+    "Distributed systems, infrastructure, self-hosted platforms, and practical AI projects.",
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-gray-200`}
-        >
-        <Navbar />
-        {children}
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} bg-black text-zinc-100 antialiased`}
+      >
+        <div className="min-h-screen">
+          <div className="mx-auto max-w-6xl px-6">
+            <Navbar />
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );
