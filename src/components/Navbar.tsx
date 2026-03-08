@@ -15,8 +15,8 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="border-b border-zinc-900">
-      <nav className="flex items-center justify-between py-5">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[rgba(11,13,16,0.7)] backdrop-blur-md">
+      <nav className="flex items-center justify-between py-4">
         <Link
           href="/"
           className="text-base font-semibold tracking-tight text-white"
