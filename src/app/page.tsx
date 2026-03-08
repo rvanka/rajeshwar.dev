@@ -86,8 +86,8 @@ export default function Home() {
           About me
         </p>
 
-        <h1 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl lg:text-6xl">
-          Staff Software Engineer / Technical Lead Manager working across
+        <h1 className="mt-4 text-xl font-semibold tracking-tight text-white md:text-2xl lg:text-3xl">
+          Staff Software Engineer at Google working across
           databases, distributed systems, and AI/data infrastructure.
         </h1>
 
