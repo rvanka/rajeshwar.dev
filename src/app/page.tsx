@@ -1,62 +1,91 @@
 export default function Home() {
   return (
-    <main className="space-y-16">
+    <main className="space-y-32">
 
-      {/* Hero Section */}
-      <section>
-        <h1 className="text-5xl font-bold mb-4">
+      {/* HERO */}
+      <section className="max-w-3xl">
+
+        <h1 className="text-6xl font-bold leading-tight">
           Rajeshwar Vanka
         </h1>
 
-        <p className="text-xl text-gray-600">
+        <p className="text-xl text-gray-400 mt-6">
           Staff Software Engineer / Technical Lead Manager at Google
         </p>
 
-        <p className="mt-4 max-w-2xl text-lg">
-          I work on large-scale distributed systems, databases,
+        <p className="text-lg text-gray-300 mt-8">
+          I work on distributed systems, large-scale databases,
           and infrastructure. My interests include compiler
           optimization, self-hosted systems, and machine learning
           platforms.
         </p>
 
-        <div className="mt-6 flex gap-6">
-          <a href="/projects" className="text-blue-600">Projects</a>
-          <a href="/publications" className="text-blue-600">Publications</a>
-          <a href="/resume" className="text-blue-600">Resume</a>
-        </div>
       </section>
 
-      {/* Highlights */}
+
+      {/* CURRENT INTERESTS */}
+
       <section>
-        <h2 className="text-2xl font-semibold mb-4">
-          Current Work
+
+        <h2 className="text-2xl font-semibold mb-6">
+          Current Interests
         </h2>
 
-        <ul className="space-y-2">
+        <ul className="space-y-3 text-gray-400">
+
           <li>Distributed systems and database infrastructure</li>
+
           <li>Self-hosted ML and infrastructure experiments</li>
+
           <li>Home automation platforms and systems</li>
+
           <li>News aggregation and clustering systems</li>
+
         </ul>
+
       </section>
 
-      {/* Featured Projects */}
+
+      {/* FEATURED PROJECTS */}
+
       <section>
-        <h2 className="text-2xl font-semibold mb-4">
+
+        <h2 className="text-2xl font-semibold mb-6">
           Featured Projects
         </h2>
 
-        <ul className="space-y-3">
-          <li>
-            <b>News Aggregation Platform</b> — clustering and summarizing news feeds
-          </li>
-          <li>
-            <b>Home Assistant Infrastructure</b> — self-hosted home automation stack
-          </li>
-          <li>
-            <b>OpenClaw Experiments</b> — AI agent orchestration experiments
-          </li>
-        </ul>
+        <div className="space-y-6">
+
+          <div>
+            <h3 className="text-lg font-semibold">
+              News Aggregation Platform
+            </h3>
+            <p className="text-gray-400">
+              Clustering and summarizing large news feeds.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold">
+              Home Assistant Infrastructure
+            </h3>
+            <p className="text-gray-400">
+              Self-hosted automation stack integrating sensors,
+              cameras, and smart devices.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold">
+              OpenClaw Experiments
+            </h3>
+            <p className="text-gray-400">
+              Experiments with agent orchestration and AI workflows.
+            </p>
+          </div>
+
+        </div>
+
       </section>
 
     </main>
