@@ -50,16 +50,9 @@ export default function Home() {
           About me
         </p>
 
-        <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white md:text-6xl">
+        <p className="mt-4 text-4xl font-semibold tracking-tight text-white md:text-6xl">
           Staff Software Engineer / Technical Lead Manager focused on
           databases, distributed systems, and AI/data infrastructure.
-        </h1>
-
-        <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-400 md:text-xl">
-          I work on large-scale systems and database infrastructure, with deep
-          experience across compilers, profiling, performance engineering, and
-          developer tooling. Outside of work, I build projects around
-          self-hosting, home automation, news intelligence, and applied ML.
         </p>
 
         <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-zinc-500">

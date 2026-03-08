@@ -117,7 +117,7 @@ export default function ResumePage() {
 
         <div className="flex gap-3">
           <a
-            href="/resume.pdf"
+            href="/rajeshwar_vanka.pdf"
             target="_blank"
             rel="noreferrer"
             className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black transition hover:bg-zinc-200"
@@ -125,7 +125,7 @@ export default function ResumePage() {
             View PDF
           </a>
           <a
-            href="/resume.pdf"
+            href="/rajeshwar_vanka.pdf"
             download
             className="rounded-full border border-zinc-700 bg-white/5 px-5 py-3 text-sm font-medium text-zinc-200 transition hover:border-zinc-500 hover:bg-white/10"
           >
