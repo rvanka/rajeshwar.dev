@@ -80,7 +80,7 @@ export default function Home() {
       </p>
 
       <h1 className="mt-4 text-xl font-semibold tracking-tight text-white md:text-2xl lg:text-3xl">
-        Staff Software Engineer / Technical Lead Manager focused on
+        Staff Software Engineer at Google focused on
         databases, distributed systems, and AI/data infrastructure.
       </h1>
 
