@@ -110,7 +110,7 @@ export default function ResumePage() {
             Experience, systems work, and selected projects.
           </h1>
           <p className="mt-5 text-lg leading-8 text-zinc-400">
-            A living summary of my work across databases, infrastructure,
+            A summary of my work across databases, infrastructure,
             compilers, performance engineering, and personal technical projects.
           </p>
         </div>
