@@ -2,41 +2,34 @@ import Link from "next/link";
 
 const focusAreas = [
   {
-    title: "Distributed Systems",
+    title: "Cloud Databases",
     description:
-      "Large-scale infrastructure, databases, performance, and reliability engineering.",
+      "Technical leadership and engineering work around Cloud Spanner, large-scale data systems, and database infrastructure.",
   },
   {
-    title: "Self-Hosted Platforms",
+    title: "AI Infrastructure",
     description:
-      "Home automation, local AI infrastructure, storage, and personal cloud systems.",
+      "Work spanning AI-related infrastructure, data systems, and applied ML projects inside and outside work.",
   },
   {
-    title: "Applied AI Projects",
+    title: "Self-Hosted Systems",
     description:
-      "News clustering, agent workflows, local tooling, and practical ML systems.",
+      "Personal infrastructure across home automation, local services, storage, and practical developer tooling.",
   },
 ];
 
 const featuredProjects = [
   {
-    title: "News Aggregation Platform",
-    description:
-      "A self-hosted news pipeline for ingesting, clustering, and organizing stories with room for summarization and ranking.",
-    href: "/projects",
-    tag: "Python • Postgres • ML",
-  },
-  {
     title: "Home Assistant Infrastructure",
     description:
-      "A growing home automation stack integrating devices, sensors, cameras, remote access, and self-hosted services.",
+      "A self-hosted automation stack integrating devices, sensors, cameras, remote access, and local services.",
     href: "/projects",
     tag: "Home Assistant • Synology • Tailscale",
   },
   {
     title: "OpenClaw Experiments",
     description:
-      "Exploring agent orchestration, workflow systems, and practical ways to structure tool-using AI systems.",
+      "Exploring agent orchestration, workflow systems, and tool-using AI patterns.",
     href: "/projects",
     tag: "Agents • AI Workflows",
   },
@@ -52,14 +45,47 @@ export default function Home() {
           </p>
 
           <h1 className="mt-4 text-5xl font-semibold tracking-tight text-white md:text-7xl">
-            Building distributed systems, infrastructure, and practical AI.
+            Cloud databases, distributed systems, and AI infrastructure.
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-400 md:text-xl">
-            Staff Software Engineer / Technical Lead Manager at Google. I work
-            on databases, large-scale systems, performance, and infrastructure,
-            and I build side projects around self-hosting, automation, and ML.
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-400 md:text-xl">
+            Staff Software Engineer / Technical Lead Manager at Google, working
+            on Cloud Spanner and AI-related infrastructure. My background spans
+            large-scale databases, performance engineering, compilers, and
+            distributed systems, and I build side projects around self-hosting,
+            news intelligence, automation, and applied ML systems.
           </p>
+
+          <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-zinc-500">
+            <a
+              href="mailto:rajeshwar.vanka@gmail.com"
+              className="transition hover:text-zinc-200"
+            >
+              rajeshwar.vanka@gmail.com
+            </a>
+
+            <span className="hidden md:inline text-zinc-700">•</span>
+
+            <a
+              href="https://github.com/rvanka"
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:text-zinc-200"
+            >
+              GitHub
+            </a>
+
+            <span className="hidden md:inline text-zinc-700">•</span>
+
+            <a
+              href="https://www.linkedin.com/in/rajeshwarvanka/"
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:text-zinc-200"
+            >
+              LinkedIn
+            </a>
+          </div>
 
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
@@ -85,22 +111,20 @@ export default function Home() {
       </section>
 
       <section>
-        <div className="mb-8 flex items-end justify-between gap-4">
-          <div>
-            <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-              Focus Areas
-            </p>
-            <h2 className="mt-2 text-2xl font-semibold text-white md:text-3xl">
-              What I spend time on
-            </h2>
-          </div>
+        <div className="mb-8">
+          <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+            Focus Areas
+          </p>
+          <h2 className="mt-2 text-2xl font-semibold text-white md:text-3xl">
+            What I work on
+          </h2>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
           {focusAreas.map((item) => (
             <div
               key={item.title}
-              className="rounded-2xl border border-zinc-800 bg-zinc-950/70 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.02)]"
+              className="rounded-2xl border border-zinc-800 bg-zinc-950/70 p-6"
             >
               <h3 className="text-lg font-semibold text-white">{item.title}</h3>
               <p className="mt-3 text-sm leading-7 text-zinc-400">
@@ -135,13 +159,13 @@ export default function Home() {
             <Link
               key={project.title}
               href={project.href}
-              className="group rounded-2xl border border-zinc-800 bg-zinc-950 p-6 transition hover:-translate-y-0.5 hover:border-zinc-700 hover:bg-zinc-900"
+              className="group rounded-2xl border border-zinc-800 bg-zinc-950 p-6 transition hover:border-zinc-700 hover:bg-zinc-900"
             >
               <div className="text-xs uppercase tracking-[0.18em] text-zinc-500">
                 {project.tag}
               </div>
 
-              <h3 className="mt-4 text-xl font-semibold text-white group-hover:text-zinc-100">
+              <h3 className="mt-4 text-xl font-semibold text-white">
                 {project.title}
               </h3>
 
