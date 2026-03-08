@@ -118,6 +118,37 @@ const cloudSpannerCards = [
   },
 ];
 
+function TimelineItem({
+  title,
+  subtitle,
+  period,
+  children,
+}: {
+  title: string;
+  subtitle?: string;
+  period?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="relative pl-10">
+      <div className="absolute left-0 top-2 h-full w-px bg-white/10" />
+      <div className="absolute left-[-5px] top-2 h-3 w-3 rounded-full border border-white/20 bg-zinc-400" />
+
+      <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+        <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
+          <div>
+            <h2 className="text-xl font-semibold text-white">{title}</h2>
+            {subtitle ? <p className="mt-1 text-zinc-400">{subtitle}</p> : null}
+          </div>
+          {period ? <p className="text-sm text-zinc-500">{period}</p> : null}
+        </div>
+
+        <div className="mt-5 text-sm leading-7 text-zinc-400">{children}</div>
+      </div>
+    </div>
+  );
+}
+
 export default function ResumePage() {
   return (
     <main className="space-y-16 pb-24 pt-10">
@@ -140,7 +171,7 @@ export default function ResumePage() {
             href="/rajeshwar_vanka.pdf"
             target="_blank"
             rel="noreferrer"
-            className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black transition hover:bg-zinc-200"
+            className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black transition hover:bg-zinc-400"
           >
             View PDF
           </a>
@@ -189,79 +220,122 @@ export default function ResumePage() {
         </div>
       </section>
 
-      <section>
-        <div className="mb-6">
-          <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-            Experience
+     <section>
+      <div className="mb-6">
+        <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+          Experience
+        </p>
+        <h2 className="mt-2 text-2xl font-semibold text-white">
+          Google — Cloud Spanner
+        </h2>
+        <p className="mt-2 text-zinc-400">
+          Staff Software Engineer / Technical Lead Manager
+        </p>
+      </div>
+      
+      <div className="space-y-6">
+        <TimelineItem
+          title="Technical Lead Manager"
+          subtitle="Leadership, execution, and cross-functional delivery"
+          period="Mar 2022 – Dec 2025"
+        >
+          <p>
+            I led teams spanning software engineers and technical leads across key
+            Cloud Spanner initiatives, helping move projects from early concept
+            through execution and delivery.
           </p>
-          <h2 className="mt-2 text-2xl font-semibold text-white">
-            Google — Cloud Spanner
-          </h2>
-          <p className="mt-2 text-zinc-400">
-            Staff Software Engineer / Technical Lead Manager
+      
+          <ul className="mt-4 space-y-3">
+            <li className="ml-5 list-disc">
+              Led teams working on major Cloud Spanner efforts, including customer
+              migrations and product initiatives.
+            </li>
+            <li className="ml-5 list-disc">
+              Worked closely with Directors, UTLs, PMs, and senior engineering
+              leadership to align scope, priorities, and execution plans.
+            </li>
+            <li className="ml-5 list-disc">
+              Helped drive ambiguous, cross-functional efforts to completion through
+              alignment, communication, dependency management, and conflict
+              resolution.
+            </li>
+            <li className="ml-5 list-disc">
+              Balanced strategic priorities, engineering execution, and customer
+              needs across internal and external stakeholders.
+            </li>
+            <li className="ml-5 list-disc">
+              Supported projects from early technical exploration through committed
+              delivery, helping teams stay focused on high-impact outcomes.
+            </li>
+          </ul>
+        </TimelineItem>
+      
+        <TimelineItem
+          title="Staff Software Engineer"
+          subtitle="Deep technical work in databases and distributed systems"
+          period="Dec 2021 – Present"
+        >
+          <p>
+            Alongside leadership responsibilities, I continued to work deeply on
+            hard technical problems in Cloud Spanner spanning scalability,
+            distributed resource management, customer-facing architecture, and
+            database infrastructure.
           </p>
-        </div>
+      
+          <ul className="mt-4 space-y-3">
+            <li className="ml-5 list-disc">
+              Designed distributed rate capping and token-bucket-based resource
+              management in Cloud Spanner at very large scale.
+            </li>
+            <li className="ml-5 list-disc">
+              Led technical direction for Cassandra compatibility work in Spanner,
+              including ideation, prototyping, implementation, and technical
+              problem solving.
+            </li>
+            <li className="ml-5 list-disc">
+              Unblocked scalability bottlenecks in large Spanner regions and
+              improved system behavior at scale.
+            </li>
+            <li className="ml-5 list-disc">
+              Worked directly on database and distributed systems problems involving
+              scale, performance, resource management, and architecture.
+            </li>
+            <li className="ml-5 list-disc">
+              Partnered with customers and engineering teams to move complex
+              technical efforts from proof-of-concept to committed adoption.
+            </li>
+          </ul>
+        </TimelineItem>
+      </div>
+    </section> 
 
-        <div className="grid gap-6 md:grid-cols-2">
-          {cloudSpannerCards.map((card) => (
-            <div
-              key={card.label}
-              className="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
-            >
-              <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
-                <div>
-                  <div className="text-sm text-zinc-500">{card.label}</div>
-                  <h3 className="mt-2 text-xl font-semibold text-white">
-                    {card.title}
-                  </h3>
-                </div>
-                <p className="text-sm text-zinc-500">{card.period}</p>
-              </div>
+    <section>
+      <div className="mb-6">
+        <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+          Earlier experience
+        </p>
+        <p className="mt-2 text-zinc-400">Roles prior to Cloud Spanner.</p>
+      </div>
 
-              <p className="mt-4 text-sm leading-7 text-zinc-400">
-                {card.summary}
-              </p>
-
-              <ul className="mt-5 space-y-3 text-sm leading-7 text-zinc-400">
-                {card.bullets.map((bullet) => (
-                  <li key={bullet} className="ml-5 list-disc">
-                    {bullet}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section>
-        <div className="mt-6 space-y-6">
-          {experience.map((item) => (
-            <div
-              key={`${item.company}-${item.role}`}
-              className="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
-            >
-              <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
-                <div>
-                  <h2 className="text-xl font-semibold text-white">
-                    {item.company}
-                  </h2>
-                  <p className="mt-1 text-zinc-400">{item.role}</p>
-                </div>
-                <p className="text-sm text-zinc-500">{item.period}</p>
-              </div>
-
-              <ul className="mt-5 space-y-3 text-sm leading-7 text-zinc-400">
-                {item.bullets.map((bullet) => (
-                  <li key={bullet} className="ml-5 list-disc">
-                    {bullet}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
+      <div className="space-y-6">
+        {experience.map((item) => (
+          <TimelineItem
+            key={`${item.company}-${item.role}`}
+            title={item.company}
+            subtitle={item.role}
+            period={item.period}
+          >
+            <ul className="space-y-3">
+              {item.bullets.map((bullet) => (
+                <li key={bullet} className="ml-5 list-disc">
+                  {bullet}
+                </li>
+              ))}
+            </ul>
+          </TimelineItem>
+        ))}
+      </div>
+    </section>
 
       <section>
         <div className="mb-6">
