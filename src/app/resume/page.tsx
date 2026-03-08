@@ -157,12 +157,9 @@ export default function ResumePage() {
           <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
             Experience & Resume
           </p>
-          <h1 className="mt-3 text-4xl font-semibold tracking-tight text-white md:text-5xl">
-            Experience, systems work, and selected projects.
-          </h1>
           <p className="mt-5 text-lg leading-8 text-zinc-400">
-            A summary of my work across databases, infrastructure,
-            compilers, performance engineering, and personal technical projects.
+            Work across databases, infrastructure, compilers, performance engineering, 
+            and personal systems projects.
           </p>
         </div>
 
