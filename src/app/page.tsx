@@ -1,5 +1,17 @@
 import Link from "next/link";
 
+const systems = [
+  "Cloud Spanner",
+  "Cassandra API",
+  "Distributed Systems",
+  "AI / Data Infrastructure",
+  "AutoFDO",
+  "MATLAB JIT",
+  "Home Assistant",
+  "News Platform",
+  "Self-Hosted Infra",
+];
+
 const highlights = [
   {
     title: "What I do",
@@ -42,71 +54,109 @@ const featuredProjects = [
   },
 ];
 
+const featuredWriting = [
+  {
+    title: "Introducing Cassandra-compatible API in Cloud Spanner",
+    description:
+      "Announcing the Cassandra-compatible API for Cloud Spanner, enabling applications built for Cassandra to run on Spanner’s globally distributed architecture.",
+    href: "https://cloud.google.com/blog/products/databases/introducing-cassandra-compatible-api-in-spanner",
+    tag: "Cloud Spanner • Cassandra API",
+  },
+  {
+    title: "Cloud Spanner doubles the number of updates per transaction",
+    description:
+      "An engineering deep dive into improvements that doubled the number of updates allowed per transaction in Cloud Spanner.",
+    href: "https://cloud.google.com/blog/products/databases/cloud-spanner-doubles-the-number-of-updates-per-transaction",
+    tag: "Cloud Spanner • Performance",
+  },
+];
+
 export default function Home() {
   return (
     <main className="space-y-24 pb-24 pt-10 md:pt-16">
-      <section className="max-w-4xl">
+     <section className="max-w-4xl">
+      <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+        About me
+      </p>
+
+      <h1 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl lg:text-6xl">
+        Staff Software Engineer / Technical Lead Manager focused on
+        databases, distributed systems, and AI/data infrastructure.
+      </h1>
+
+      <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-zinc-500">
+        <a
+          href="mailto:rajeshwar.vanka@gmail.com"
+          className="transition hover:text-zinc-200"
+        >
+          rajeshwar.vanka@gmail.com
+        </a>
+
+        <span className="hidden md:inline text-zinc-700">•</span>
+
+        <a
+          href="https://github.com/rvanka"
+          target="_blank"
+          rel="noreferrer"
+          className="transition hover:text-zinc-200"
+        >
+          GitHub
+        </a>
+
+        <span className="hidden md:inline text-zinc-700">•</span>
+
+        <a
+          href="https://www.linkedin.com/in/rajeshwarvanka/"
+          target="_blank"
+          rel="noreferrer"
+          className="transition hover:text-zinc-200"
+        >
+          LinkedIn
+        </a>
+      </div>
+
+      <div className="mt-8 flex flex-wrap gap-4">
+        <Link
+          href="/projects"
+          className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black transition hover:bg-zinc-200"
+        >
+          View Projects
+        </Link>
+
+        <Link
+          href="/resume"
+          className="rounded-full border border-zinc-700 bg-white/5 px-5 py-3 text-sm font-medium text-zinc-200 transition hover:border-zinc-500 hover:bg-white/10"
+        >
+          Experience & Resume
+        </Link>
+
+        <Link
+          href="/publications"
+          className="rounded-full border border-zinc-700 bg-white/5 px-5 py-3 text-sm font-medium text-zinc-200 transition hover:border-zinc-500 hover:bg-white/10"
+        >
+          Publications
+        </Link>
+      </div>
+    </section> 
+
+    <section>
+      <div className="mb-5">
         <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-          About me
+          Systems I’ve worked on
         </p>
+      </div>
 
-        <p className="mt-4 text-4xl font-semibold tracking-tight text-white md:text-6xl">
-          Staff Software Engineer / Technical Lead Manager focused on
-          databases, distributed systems, and AI/data infrastructure.
-        </p>
-
-        <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-zinc-500">
-          <a
-            href="mailto:rajeshwar.vanka@gmail.com"
-            className="transition hover:text-zinc-200"
+      <div className="flex flex-wrap gap-3">
+        {systems.map((item) => (
+          <span
+            key={item}
+            className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-zinc-300 backdrop-blur-sm transition hover:border-white/20 hover:bg-white/[0.07] hover:text-white"
           >
-            rajeshwar.vanka@gmail.com
-          </a>
-
-          <span className="hidden md:inline text-zinc-700">•</span>
-
-          <a
-            href="https://github.com/rvanka"
-            target="_blank"
-            rel="noreferrer"
-            className="transition hover:text-zinc-200"
-          >
-            GitHub
-          </a>
-
-          <span className="hidden md:inline text-zinc-700">•</span>
-
-          <a
-            href="https://www.linkedin.com/in/rajeshwarvanka/"
-            target="_blank"
-            rel="noreferrer"
-            className="transition hover:text-zinc-200"
-          >
-            LinkedIn
-          </a>
-        </div>
-
-        <div className="mt-8 flex flex-wrap gap-4">
-          <Link
-            href="/projects"
-            className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black transition hover:bg-zinc-200"
-          >
-            View Projects
-          </Link>
-          <Link
-            href="/resume"
-            className="rounded-full border border-zinc-700 bg-white/5 px-5 py-3 text-sm font-medium text-zinc-200 transition hover:border-zinc-500 hover:bg-white/10"
-          >
-            Experience & Resume
-          </Link>
-          <Link
-            href="/publications"
-            className="rounded-full border border-zinc-700 bg-white/5 px-5 py-3 text-sm font-medium text-zinc-200 transition hover:border-zinc-500 hover:bg-white/10"
-          >
-            Publications
-          </Link>
-        </div>
-      </section>
+            {item}
+          </span>
+        ))}
+      </div>
+    </section>
 
       <section>
         <div className="mb-8">
@@ -176,6 +226,46 @@ export default function Home() {
           ))}
         </div>
       </section>
-    </main>
+
+      <section>
+        <div className="mb-8">
+          <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+            Writing
+          </p>
+
+          <h2 className="mt-2 text-2xl font-semibold text-white md:text-3xl">
+            Selected articles
+          </h2>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {featuredWriting.map((post) => (
+            <a
+              key={post.title}
+              href={post.href}
+              target="_blank"
+              rel="noreferrer"
+              className="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition hover:border-white/20 hover:bg-white/[0.05]"
+            >
+              <div className="text-xs uppercase tracking-[0.18em] text-zinc-500">
+                {post.tag}
+              </div>
+          
+              <h3 className="mt-4 text-xl font-semibold text-white">
+                {post.title}
+              </h3>
+          
+              <p className="mt-3 text-sm leading-7 text-zinc-400">
+                {post.description}
+              </p>
+          
+              <div className="mt-6 text-sm text-zinc-300">
+                Read article →
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+      </main>
   );
 }
