@@ -24,7 +24,7 @@ const highlights = [
       "My recent work includes Cloud Spanner, customer-facing technical leadership, and infrastructure work at the intersection of databases and AI/data systems.",
   },
   {
-    title: "Outside work",
+    title: "At home",
     description:
       "I build projects around self-hosting, home automation, news intelligence, and applied ML systems.",
   },
@@ -79,7 +79,7 @@ export default function Home() {
         About me
       </p>
 
-      <h1 className="mt-4 text-2xl font-semibold tracking-tight text-white md:text-4xl lg:text-5xl">
+      <h1 className="mt-4 text-xl font-semibold tracking-tight text-white md:text-2xl lg:text-3xl">
         Staff Software Engineer / Technical Lead Manager focused on
         databases, distributed systems, and AI/data infrastructure.
       </h1>
