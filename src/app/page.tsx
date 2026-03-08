@@ -1,24 +1,31 @@
 import Link from "next/link";
 
-const focusAreas = [
+const highlights = [
   {
-    title: "Cloud Databases",
+    title: "Cloud Spanner",
     description:
-      "Technical leadership and engineering work around Cloud Spanner, large-scale data systems, and database infrastructure.",
+      "Technical leadership and engineering work on large-scale cloud database infrastructure and customer-facing systems.",
   },
   {
-    title: "AI Infrastructure",
+    title: "AI & Data Systems",
     description:
-      "Work spanning AI-related infrastructure, data systems, and applied ML projects inside and outside work.",
+      "Work across AI-related infrastructure, data systems, and applied ML projects inside and outside work.",
   },
   {
-    title: "Self-Hosted Systems",
+    title: "Side Projects",
     description:
-      "Personal infrastructure across home automation, local services, storage, and practical developer tooling.",
+      "Smart news app, self-hosting, home automation, local infrastructure, and developer tooling.",
   },
 ];
 
 const featuredProjects = [
+  {
+    title: "Smart News App",
+    description:
+      "A self-hosted news pipeline for ingesting, clustering, and organizing stories, with room for summarization and ranking.",
+    href: "/projects",
+    tag: "Python • Postgres • ML",
+  },
   {
     title: "Home Assistant Infrastructure",
     description:
@@ -41,19 +48,19 @@ export default function Home() {
       <section className="pt-8 md:pt-16">
         <div className="max-w-4xl">
           <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-            Rajeshwar Vanka
+            About me
           </p>
 
-          <h1 className="mt-4 text-5xl font-semibold tracking-tight text-white md:text-7xl">
-            Cloud databases, distributed systems, and AI infrastructure.
+          <h1 className="mt-4 max-w-4xl text-4xl font-semibold tracking-tight text-white md:text-6xl">
+            I work on Cloud Spanner, large-scale data systems, and AI infrastructure.
           </h1>
 
           <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-400 md:text-xl">
-            Staff Software Engineer / Technical Lead Manager at Google, working
-            on Cloud Spanner and AI-related infrastructure. My background spans
-            large-scale databases, performance engineering, compilers, and
-            distributed systems, and I build side projects around self-hosting,
-            news intelligence, automation, and applied ML systems.
+            I’m a Staff Software Engineer / Technical Lead Manager at Google.
+            My work spans distributed databases, performance engineering,
+            infrastructure, and developer systems. Outside of work, I build
+            projects around self-hosting, home automation, news intelligence,
+            and applied ML.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-zinc-500">
@@ -113,15 +120,15 @@ export default function Home() {
       <section>
         <div className="mb-8">
           <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-            Focus Areas
+            Overview
           </p>
           <h2 className="mt-2 text-2xl font-semibold text-white md:text-3xl">
-            What I work on
+            Areas I work across
           </h2>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
-          {focusAreas.map((item) => (
+          {highlights.map((item) => (
             <div
               key={item.title}
               className="rounded-2xl border border-zinc-800 bg-zinc-950/70 p-6"
@@ -139,10 +146,10 @@ export default function Home() {
         <div className="mb-8 flex items-end justify-between gap-4">
           <div>
             <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-              Selected Work
+              Selected projects
             </p>
             <h2 className="mt-2 text-2xl font-semibold text-white md:text-3xl">
-              Featured projects
+              Things I’ve been building
             </h2>
           </div>
 

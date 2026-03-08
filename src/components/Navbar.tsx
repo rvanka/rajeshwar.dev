@@ -16,13 +16,13 @@ export default function Navbar() {
 
   return (
     <header className="border-b border-zinc-900">
-      <nav className="mx-auto flex items-center justify-between py-5">
+      <nav className="flex items-center justify-between py-5">
         <Link
           href="/"
-          className="text-lg font-semibold tracking-tight text-white"
+          className="text-base font-semibold tracking-tight text-white"
           onClick={() => setOpen(false)}
         >
-          Rajeshwar
+          Rajeshwar Vanka
         </Link>
 
         <div className="hidden items-center gap-6 text-sm text-zinc-400 md:flex">
@@ -35,24 +35,6 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-
-          <a
-            href="https://github.com/rvanka"
-            target="_blank"
-            rel="noreferrer"
-            className="transition hover:text-white"
-          >
-            GitHub
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/rajeshwarvanka/"
-            target="_blank"
-            rel="noreferrer"
-            className="transition hover:text-white"
-          >
-            LinkedIn
-          </a>
         </div>
 
         <button
