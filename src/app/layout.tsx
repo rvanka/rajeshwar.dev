@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Rajeshwar Vanka",
   description:
-    "Distributed systems, infrastructure, self-hosted platforms, and practical AI projects.",
+    "Distributed systems, databases, AI/data infrastructure, and self-hosted systems.",
 };
 
 export default function RootLayout({
@@ -27,9 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-black text-zinc-100 antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased text-zinc-100 bg-[#0b0d10]`}
       >
-        <div className="min-h-screen">
+        <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.10),transparent_28%),radial-gradient(circle_at_top_right,rgba(168,85,247,0.08),transparent_24%),linear-gradient(to_bottom,#0b0d10,#0f1115)]">
           <div className="mx-auto max-w-6xl px-6">
             <Navbar />
             {children}
