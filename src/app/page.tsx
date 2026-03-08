@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const systems = [
   "Cloud Spanner",
-  "Cassandra API",
+  "Cassandra",
   "Distributed Systems",
   "AI / Data Infrastructure",
   "AutoFDO",
@@ -79,7 +79,7 @@ export default function Home() {
         About me
       </p>
 
-      <h1 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl lg:text-6xl">
+      <h1 className="mt-4 text-2xl font-semibold tracking-tight text-white md:text-4xl lg:text-5xl">
         Staff Software Engineer / Technical Lead Manager focused on
         databases, distributed systems, and AI/data infrastructure.
       </h1>
