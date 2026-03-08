@@ -1,16 +1,5 @@
 const experience = [
   {
-    company: "Google — Cloud Spanner",
-    role: "Staff Software Engineer / Technical Lead Manager",
-    period: "Dec 2021 – Present",
-    bullets: [
-      "Technical lead / manager for large-scale Cloud Spanner work, including customer-facing migrations and core infrastructure projects.",
-      "Led teams spanning technical execution, alignment, prototyping, implementation, and delivery.",
-      "Worked on distributed resource management, scalability improvements, and large-region infrastructure limits.",
-      "Supported customer engagements from early technical evaluation through committed adoption.",
-    ],
-  },
-  {
     company: "Google — Google-Wide Profiling / AutoFDO",
     role: "Senior Software Engineer",
     period: "Oct 2018 – Dec 2021",
@@ -98,6 +87,37 @@ const skills = [
   "Self-hosted Infrastructure",
 ];
 
+const cloudSpannerCards = [
+  {
+    label: "Technical Lead Manager",
+    period: "Mar 2022 – Dec 2025",
+    title: "Leadership, execution, and cross-functional delivery",
+    summary:
+      "I led teams spanning software engineers and technical leads across key Cloud Spanner initiatives, helping move projects from early concept through execution and delivery.",
+    bullets: [
+      "Led teams working on major Cloud Spanner efforts, including customer migrations and product initiatives.",
+      "Worked closely with Directors, UTLs, PMs, and senior engineering leadership to align scope, priorities, and execution plans.",
+      "Helped drive ambiguous, cross-functional efforts to completion through alignment, communication, dependency management, and conflict resolution.",
+      "Balanced strategic priorities, engineering execution, and customer needs across internal and external stakeholders.",
+      "Supported projects from early technical exploration through committed delivery, helping teams stay focused on high-impact outcomes.",
+    ],
+  },
+  {
+    label: "Staff Software Engineer",
+    period: "Dec 2021 – Present",
+    title: "Deep technical work in databases and distributed systems",
+    summary:
+      "Alongside leadership responsibilities, I continued to work deeply on hard technical problems in Cloud Spanner spanning scalability, distributed resource management, customer-facing architecture, and database infrastructure.",
+    bullets: [
+      "Designed distributed rate capping and token-bucket-based resource management in Cloud Spanner at very large scale.",
+      "Led technical direction for Cassandra compatibility work in Spanner, including ideation, prototyping, implementation, and technical problem solving.",
+      "Unblocked scalability bottlenecks in large Spanner regions and improved system behavior at scale.",
+      "Worked directly on database and distributed systems problems involving scale, performance, resource management, and architecture.",
+      "Partnered with customers and engineering teams to move complex technical efforts from proof-of-concept to committed adoption.",
+    ],
+  },
+];
+
 export default function ResumePage() {
   return (
     <main className="space-y-16 pb-24 pt-10">
@@ -170,9 +190,51 @@ export default function ResumePage() {
       </section>
 
       <section>
-        <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-          Experience
-        </p>
+        <div className="mb-6">
+          <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+            Experience
+          </p>
+          <h2 className="mt-2 text-2xl font-semibold text-white">
+            Google — Cloud Spanner
+          </h2>
+          <p className="mt-2 text-zinc-400">
+            Staff Software Engineer / Technical Lead Manager
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {cloudSpannerCards.map((card) => (
+            <div
+              key={card.label}
+              className="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+            >
+              <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <div className="text-sm text-zinc-500">{card.label}</div>
+                  <h3 className="mt-2 text-xl font-semibold text-white">
+                    {card.title}
+                  </h3>
+                </div>
+                <p className="text-sm text-zinc-500">{card.period}</p>
+              </div>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-400">
+                {card.summary}
+              </p>
+
+              <ul className="mt-5 space-y-3 text-sm leading-7 text-zinc-400">
+                {card.bullets.map((bullet) => (
+                  <li key={bullet} className="ml-5 list-disc">
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section>
         <div className="mt-6 space-y-6">
           {experience.map((item) => (
             <div
