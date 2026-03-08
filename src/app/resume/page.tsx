@@ -231,42 +231,7 @@ export default function ResumePage() {
       </div>
       
       <div className="space-y-6">
-        <TimelineItem
-          title="Technical Lead Manager"
-          subtitle="Leadership, execution, and cross-functional delivery"
-          period="Mar 2022 – Dec 2025"
-        >
-          <p>
-            I led teams spanning software engineers and technical leads across key
-            Cloud Spanner initiatives, helping move projects from early concept
-            through execution and delivery.
-          </p>
-      
-          <ul className="mt-4 space-y-3">
-            <li className="ml-5 list-disc">
-              Led teams working on major Cloud Spanner efforts, including customer
-              migrations and product initiatives.
-            </li>
-            <li className="ml-5 list-disc">
-              Worked closely with Directors, UTLs, PMs, and senior engineering
-              leadership to align scope, priorities, and execution plans.
-            </li>
-            <li className="ml-5 list-disc">
-              Helped drive ambiguous, cross-functional efforts to completion through
-              alignment, communication, dependency management, and conflict
-              resolution.
-            </li>
-            <li className="ml-5 list-disc">
-              Balanced strategic priorities, engineering execution, and customer
-              needs across internal and external stakeholders.
-            </li>
-            <li className="ml-5 list-disc">
-              Supported projects from early technical exploration through committed
-              delivery, helping teams stay focused on high-impact outcomes.
-            </li>
-          </ul>
-        </TimelineItem>
-      
+
         <TimelineItem
           title="Staff Software Engineer"
           subtitle="Deep technical work in databases and distributed systems"
@@ -303,6 +268,44 @@ export default function ResumePage() {
             </li>
           </ul>
         </TimelineItem>
+
+        <TimelineItem
+          title="Technical Lead Manager"
+          subtitle="Leadership, execution, and cross-functional delivery"
+          period="Mar 2022 – Dec 2025"
+        >
+          <p>
+            I led teams spanning software engineers and technical leads across key
+            Cloud Spanner initiatives, helping move projects from early concept
+            through execution and delivery.
+          </p>
+      
+          <ul className="mt-4 space-y-3">
+            <li className="ml-5 list-disc">
+              Led teams working on major Cloud Spanner efforts, including customer
+              migrations and product initiatives.
+            </li>
+            <li className="ml-5 list-disc">
+              Worked closely with Directors, UTLs, PMs, and senior engineering
+              leadership to align scope, priorities, and execution plans.
+            </li>
+            <li className="ml-5 list-disc">
+              Helped drive ambiguous, cross-functional efforts to completion through
+              alignment, communication, dependency management, and conflict
+              resolution.
+            </li>
+            <li className="ml-5 list-disc">
+              Balanced strategic priorities, engineering execution, and customer
+              needs across internal and external stakeholders.
+            </li>
+            <li className="ml-5 list-disc">
+              Supported projects from early technical exploration through committed
+              delivery, helping teams stay focused on high-impact outcomes.
+            </li>
+          </ul>
+        </TimelineItem>
+      
+
       </div>
     </section> 
 

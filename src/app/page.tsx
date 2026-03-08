@@ -14,17 +14,6 @@ const systems = [
 
 const googleWorkCards = [
   {
-    label: "Technical Lead Manager",
-    title: "Leadership, execution, and cross-functional delivery",
-    description:
-      "Led teams across key Cloud Spanner initiatives, helping move projects from early concept through execution and delivery.",
-    bullets: [
-      "Worked with Directors, UTLs, PMs, and senior engineering leadership to align priorities and execution.",
-      "Led teams spanning engineers and technical leads across customer migrations and product efforts.",
-      "Drove ambiguous, cross-functional efforts to completion through alignment, communication, and conflict resolution.",
-    ],
-  },
-  {
     label: "Staff Software Engineer",
     title: "Deep technical work in databases and distributed systems",
     description:
@@ -33,6 +22,17 @@ const googleWorkCards = [
       "Designed distributed rate capping and token-bucket-based resource management in Cloud Spanner at very large scale.",
       "Led technical direction for Cassandra compatibility work in Spanner.",
       "Unblocked scalability bottlenecks in large Spanner regions and improved system behavior at scale.",
+    ],
+  },
+  {
+    label: "Technical Lead Manager",
+    title: "Leadership, execution, and cross-functional delivery",
+    description:
+      "Led teams across key Cloud Spanner initiatives, helping move projects from early concept through execution and delivery.",
+    bullets: [
+      "Worked with Directors, UTLs, PMs, and senior engineering leadership to align priorities and execution.",
+      "Led teams spanning engineers and technical leads across customer migrations and product efforts.",
+      "Drove ambiguous, cross-functional efforts to completion through alignment, communication, and conflict resolution.",
     ],
   },
 ];
