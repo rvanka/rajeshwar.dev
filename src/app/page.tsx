@@ -86,9 +86,8 @@ export default function Home() {
           About me
         </p>
 
-        <h1 className="mt-4 text-xl font-semibold tracking-tight text-white md:text-2xl lg:text-3xl">
-          Staff Software Engineer at Google working on 
-          databases, distributed systems, and AI/data infrastructure.
+        <h1 className="mt-4 max-w-3xl text-xl font-semibold leading-[1.08] tracking-[-0.03em] text-white md:text-2xl lg:text-3xl">
+          Staff Software Engineer working on Cloud Spanner and large-scale distributed data systems.
         </h1>
 
         <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-zinc-500">
@@ -122,7 +121,7 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-4">
+        <div className="mt-10 flex flex-wrap gap-4">
           <Link
             href="/projects"
             className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black transition hover:bg-zinc-200"
@@ -179,7 +178,7 @@ export default function Home() {
           {googleWorkCards.map((card) => (
             <div
               key={card.label}
-              className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 shadow-[0_1px_0_rgba(255,255,255,0.03)] backdrop-blur-sm"
+              className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-[0_1px_0_rgba(255,255,255,0.05)] backdrop-blur-sm transition hover:bg-white/[0.06]"
             >
               <div className="text-sm text-zinc-500">{card.label}</div>
 

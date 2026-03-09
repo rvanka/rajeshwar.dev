@@ -133,8 +133,7 @@ function TimelineItem({
     <div className="relative pl-10">
       <div className="absolute left-0 top-2 h-full w-px bg-white/10" />
       <div className="absolute left-[-5px] top-2 h-3 w-3 rounded-full border border-white/20 bg-zinc-400" />
-
-      <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+      <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-[0_1px_0_rgba(255,255,255,0.05)] backdrop-blur-sm transition hover:bg-white/[0.06]">
         <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
           <div>
             <h2 className="text-xl font-semibold text-white">{title}</h2>
@@ -183,7 +182,7 @@ export default function ResumePage() {
       </section>
 
       <section className="grid gap-6 md:grid-cols-3">
-        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+        <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-[0_1px_0_rgba(255,255,255,0.05)] backdrop-blur-sm transition hover:bg-white/[0.06]">
           <div className="text-sm text-zinc-500">Current focus</div>
           <div className="mt-2 text-lg font-semibold text-white">
             Databases & infrastructure
@@ -194,7 +193,7 @@ export default function ResumePage() {
           </p>
         </div>
 
-        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+        <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-[0_1px_0_rgba(255,255,255,0.05)] backdrop-blur-sm transition hover:bg-white/[0.06]">
           <div className="text-sm text-zinc-500">Background</div>
           <div className="mt-2 text-lg font-semibold text-white">
             Compilers & tooling
@@ -205,7 +204,7 @@ export default function ResumePage() {
           </p>
         </div>
 
-        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+        <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-[0_1px_0_rgba(255,255,255,0.05)] backdrop-blur-sm transition hover:bg-white/[0.06]">
           <div className="text-sm text-zinc-500">Projects</div>
           <div className="mt-2 text-lg font-semibold text-white">
             Systems built outside work
@@ -351,7 +350,7 @@ export default function ResumePage() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+              className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-[0_1px_0_rgba(255,255,255,0.05)] backdrop-blur-sm transition hover:bg-white/[0.06]"
             >
               <h3 className="text-xl font-semibold text-white">
                 {project.title}
@@ -383,7 +382,7 @@ export default function ResumePage() {
           {education.map((item) => (
             <div
               key={`${item.school}-${item.degree}`}
-              className="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+              className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-[0_1px_0_rgba(255,255,255,0.05)] backdrop-blur-sm transition hover:bg-white/[0.06]"
             >
               <h3 className="text-lg font-semibold text-white">{item.degree}</h3>
               <p className="mt-2 text-zinc-400">{item.school}</p>
